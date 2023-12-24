@@ -10,6 +10,7 @@ import SwiftUI
 struct LandmarkList: View {
     @Environment(ModelData.self) var modelData
     @State private var showFavoritesOnly = false
+    @State private var showingProfile = false
 
     var filteredLandmarks: [Landmark] {
         modelData.landmarks.filter { landmark in
@@ -34,6 +35,21 @@ struct LandmarkList: View {
             }
             .animation(.default, value: filteredLandmarks)
             .navigationTitle("Landmarks")
+            .toolbar {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    modelData.profile.avatar
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                }
+                .sheet(isPresented: $showingProfile) {
+                    ProfileHost()
+                        .environment(modelData)
+                }
+            }
         } detail: {
             Text("Select a landmark")
         }

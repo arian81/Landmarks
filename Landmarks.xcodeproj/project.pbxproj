@@ -147,7 +147,6 @@
 				D25517902B2D4C7100FB3B59 /* Helper */,
 				D2E93B3A2B375F6700306783 /* Badges */,
 				D25517942B2D4C7100FB3B59 /* ContentView.swift */,
-				D2E93B3B2B376BD700306783 /* ProfileEditor.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +204,7 @@
 		D2E93B292B37484E00306783 /* Profiles */ = {
 			isa = PBXGroup;
 			children = (
+				D2E93B3B2B376BD700306783 /* ProfileEditor.swift */,
 				D2E93B2A2B37485B00306783 /* ProfileHost.swift */,
 				D2E93B2C2B3748D600306783 /* ProfileSummary.swift */,
 			);
@@ -469,7 +469,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.arian.Landmarks;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arian.vision-os-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -498,7 +498,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.arian.Landmarks;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arian.vision-os-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

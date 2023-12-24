@@ -29,7 +29,11 @@ struct CategoryHome: View {
                     Button {
                         showingProfile.toggle()
                     } label: {
-                        Label("User Profile", systemImage: "person.crop.circle")
+                        modelData.profile.avatar
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50)
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     }
                     .sheet(isPresented: $showingProfile) {
                         ProfileHost()
